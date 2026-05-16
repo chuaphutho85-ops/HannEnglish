@@ -24,141 +24,212 @@
       box-sizing:border-box;
     }
 
+    html{
+      scroll-behavior:smooth;
+    }
+
     body{
-      font-family:'Poppins',sans-serif;
+      font-family:'Poppins', sans-serif;
+      background:#f5f7fb;
+      color:#1f2937;
+      line-height:1.7;
+    }
+
+    a{
+      text-decoration:none;
+    }
+
+    img{
+      max-width:100%;
+      display:block;
+    }
+
+    .container{
+      width:90%;
+      max-width:1000px;
+      margin:auto;
+    }
+
+    /* =========================
+       HEADER
+    ========================== */
+
+    header{
+      background:#0f172a;
+      padding:18px 0;
+      position:sticky;
+      top:0;
+      z-index:999;
+      box-shadow:0 4px 15px rgba(0,0,0,0.08);
+    }
+
+    .header-wrapper{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:20px;
+    }
+
+    .logo-box{
+      display:flex;
+      align-items:center;
+      gap:15px;
+    }
+
+    .logo-box img{
+      width:60px;
+      height:60px;
+      border-radius:50%;
+      object-fit:cover;
+      border:3px solid #ffffff;
+    }
+
+    .logo-text{
+      color:white;
+    }
+
+    .logo-text h1{
+      font-size:1.2rem;
+      margin-bottom:2px;
+    }
+
+    .logo-text p{
+      font-size:0.85rem;
+      color:#cbd5e1;
+    }
+
+    nav a{
+      color:white;
+      margin-left:25px;
+      font-weight:500;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#38bdf8;
+    }
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero{
+      padding:90px 20px 60px;
       background:
       linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.85)),
       url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
 
-      min-height:100vh;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      padding:30px;
-    }
-
-    /* =========================
-       FORM CONTAINER
-    ========================== */
-
-    .form-container{
-      width:100%;
-      max-width:600px;
-      background:white;
-      border-radius:30px;
-      padding:45px;
-      box-shadow:0 20px 50px rgba(0,0,0,0.15);
-    }
-
-    .logo{
       text-align:center;
+      color:white;
+    }
+
+    .hero h2{
+      font-size:3rem;
       margin-bottom:20px;
     }
 
-    .logo img{
-      width:90px;
-      height:90px;
-      border-radius:50%;
-      object-fit:cover;
-      border:4px solid #38bdf8;
+    .hero span{
+      color:#38bdf8;
     }
 
-    h1{
-      text-align:center;
-      color:#0f172a;
-      margin-bottom:12px;
-      font-size:2.3rem;
+    .hero p{
+      max-width:750px;
+      margin:auto;
+      color:#e2e8f0;
+      font-size:1.05rem;
     }
 
-    .subtitle{
+    /* =========================
+       FORM SECTION
+    ========================== */
+
+    .form-section{
+      padding:80px 0;
+    }
+
+    .form-box{
+      background:white;
+      border-radius:30px;
+      padding:40px;
+      box-shadow:0 15px 40px rgba(0,0,0,0.08);
+    }
+
+    .form-title{
       text-align:center;
-      color:#64748b;
       margin-bottom:35px;
-      line-height:1.7;
     }
 
-    /* =========================
-       FORM
-    ========================== */
-
-    .input-group{
-      margin-bottom:22px;
-    }
-
-    label{
-      display:block;
-      margin-bottom:8px;
-      font-weight:600;
+    .form-title h3{
+      font-size:2rem;
+      margin-bottom:15px;
       color:#0f172a;
     }
 
-    input,
-    select,
-    textarea{
-      width:100%;
-      padding:16px;
-      border-radius:16px;
-      border:1px solid #cbd5e1;
-      font-size:1rem;
-      font-family:'Poppins',sans-serif;
-      transition:0.3s;
-    }
-
-    input:focus,
-    select:focus,
-    textarea:focus{
-      outline:none;
-      border-color:#38bdf8;
-      box-shadow:0 0 0 4px rgba(56,189,248,0.15);
-    }
-
-    textarea{
-      min-height:120px;
-      resize:vertical;
+    .form-title p{
+      color:#64748b;
     }
 
     /* =========================
-       BUTTON
+       GOOGLE FORM
     ========================== */
 
-    .submit-btn{
+    .google-form{
+      width:100%;
+      border-radius:25px;
+      overflow:hidden;
+      background:white;
+    }
+
+    .google-form iframe{
       width:100%;
       border:none;
-      background:#38bdf8;
-      color:white;
-      padding:18px;
-      border-radius:50px;
-      font-size:1rem;
-      font-weight:600;
-      cursor:pointer;
-      transition:0.3s;
-      margin-top:10px;
-      box-shadow:0 10px 25px rgba(56,189,248,0.3);
-    }
-
-    .submit-btn:hover{
-      background:#0ea5e9;
-      transform:translateY(-3px);
     }
 
     /* =========================
-       EXTRA LINKS
+       CONTACT INFO
     ========================== */
 
-    .extra-links{
-      margin-top:28px;
+    .contact-info{
+      margin-top:40px;
       text-align:center;
     }
 
-    .extra-links a{
-      color:#38bdf8;
-      text-decoration:none;
+    .contact-info p{
+      margin-bottom:15px;
+      color:#64748b;
+    }
+
+    .youtube-btn{
+      display:inline-block;
+      background:#ff0000;
+      color:white;
+      padding:15px 28px;
+      border-radius:50px;
       font-weight:600;
       transition:0.3s;
     }
 
-    .extra-links a:hover{
-      color:#0ea5e9;
+    .youtube-btn:hover{
+      background:#d60000;
+      transform:translateY(-4px);
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer{
+      background:#020617;
+      color:#cbd5e1;
+      text-align:center;
+      padding:35px 20px;
+      margin-top:80px;
+    }
+
+    footer p{
+      margin:6px 0;
+      font-size:0.95rem;
     }
 
     /* =========================
@@ -167,12 +238,20 @@
 
     @media(max-width:768px){
 
-      .form-container{
-        padding:30px;
+      .hero h2{
+        font-size:2.2rem;
       }
 
-      h1{
-        font-size:1.9rem;
+      .form-box{
+        padding:25px;
+      }
+
+      nav{
+        text-align:center;
+      }
+
+      nav a{
+        margin:0 10px;
       }
 
     }
@@ -184,126 +263,150 @@
 <body>
 
   <!-- =========================
-       FORM BOX
+       HEADER
   ========================== -->
 
-  <div class="form-container">
+  <header>
 
-    <!-- LOGO -->
+    <div class="container">
 
-    <div class="logo">
+      <div class="header-wrapper">
 
-      <img 
-        src="https://yt3.ggpht.com/s7MiNGwFfUfh3vK_AXi-6KmuxjkFszTGXIFc45ddRSfaEDeY6KB941THQzRxS0CXxPlnbpQ2Rw=s600-c-k-c0x00ffffff-no-rj-rp-mo"
-        alt="Hann English">
+        <!-- LOGO -->
+
+        <div class="logo-box">
+
+          <img 
+            src="https://yt3.ggpht.com/s7MiNGwFfUfh3vK_AXi-6KmuxjkFszTGXIFc45ddRSfaEDeY6KB941THQzRxS0CXxPlnbpQ2Rw=s600-c-k-c0x00ffffff-no-rj-rp-mo"
+            alt="Hann English Logo">
+
+          <div class="logo-text">
+
+            <h1>Hann English</h1>
+
+            <p>English For Everyone</p>
+
+          </div>
+
+        </div>
+
+        <!-- MENU -->
+
+        <nav>
+
+          <a href="index.html">Trang Chủ</a>
+          <a href="reading.html">Reading</a>
+          <a href="Listening.html">Listening</a>
+
+        </nav>
+
+      </div>
 
     </div>
 
-    <!-- TITLE -->
+  </header>
 
-    <h1>Đăng Ký Tư Vấn</h1>
+  <!-- =========================
+       HERO SECTION
+  ========================== -->
 
-    <p class="subtitle">
-      Điền thông tin bên dưới để nhận lộ trình học tiếng Anh phù hợp
-      cùng Hann English hoàn toàn miễn phí.
-    </p>
+  <section class="hero">
 
-    <!-- FORM -->
+    <div class="container">
 
-    <form action="cam-on.html">
-
-      <!-- NAME -->
-
-      <div class="input-group">
-
-        <label>Họ và tên</label>
-
-        <input 
-          type="text"
-          placeholder="Nhập họ và tên của bạn"
-          required>
-
-      </div>
-
-      <!-- PHONE -->
-
-      <div class="input-group">
-
-        <label>Số điện thoại</label>
-
-        <input 
-          type="tel"
-          placeholder="Nhập số điện thoại"
-          required>
-
-      </div>
-
-      <!-- EMAIL -->
-
-      <div class="input-group">
-
-        <label>Email</label>
-
-        <input 
-          type="email"
-          placeholder="example@gmail.com">
-
-      </div>
-
-      <!-- LEVEL -->
-
-      <div class="input-group">
-
-        <label>Trình độ hiện tại</label>
-
-        <select>
-
-          <option>Chưa biết tiếng Anh</option>
-
-          <option>Mất gốc tiếng Anh</option>
-
-          <option>Giao tiếp cơ bản</option>
-
-          <option>IELTS / TOEIC</option>
-
-          <option>Muốn nâng cao 4 kỹ năng</option>
-
-        </select>
-
-      </div>
-
-      <!-- GOAL -->
-
-      <div class="input-group">
-
-        <label>Mục tiêu học tập</label>
-
-        <textarea placeholder="Ví dụ: Giao tiếp tự tin, luyện IELTS, cải thiện kỹ năng nghe nói..."></textarea>
-
-      </div>
-
-      <!-- BUTTON -->
-
-      <button class="submit-btn">
-        Gửi Đăng Ký Tư Vấn
-      </button>
-
-    </form>
-
-    <!-- EXTRA LINKS -->
-
-    <div class="extra-links">
+      <h2>
+        Đăng Ký <span>Tư Vấn Miễn Phí</span>
+      </h2>
 
       <p>
-        Hoặc liên hệ trực tiếp qua 
-        <a href="https://youtube.com/@hannenglish-w2k?si=nNxVXVmbjdAzgzK4" target="_blank">
-          Hann English YouTube
-        </a>
+        Điền thông tin để nhận lộ trình học tiếng Anh phù hợp với trình độ,
+        mục tiêu và nhu cầu học tập của bạn cùng Hann English.
       </p>
 
     </div>
 
-  </div>
+  </section>
+
+  <!-- =========================
+       FORM SECTION
+  ========================== -->
+
+  <section class="form-section">
+
+    <div class="container">
+
+      <div class="form-box">
+
+        <!-- TITLE -->
+
+        <div class="form-title">
+
+          <h3>Thông Tin Đăng Ký</h3>
+
+          <p>
+            Hann English sẽ liên hệ tư vấn trong thời gian sớm nhất.
+          </p>
+
+        </div>
+
+        <!-- GOOGLE FORM -->
+
+        <div class="google-form">
+
+          <iframe 
+            src="https://docs.google.com/forms/d/e/1FAIpQLSeS6nrS1MUYz_5LK-WI9KSK7bwvQfZ-W0NS5gXMCZoLjPvWKQ/viewform?embedded=true"
+            width="100%"
+            height="1200"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0">
+
+            Loading…
+
+          </iframe>
+
+        </div>
+
+        <!-- CONTACT -->
+
+        <div class="contact-info">
+
+          <p>
+            Hoặc theo dõi Hann English trên YouTube để học miễn phí mỗi ngày.
+          </p>
+
+          <a 
+            href="https://youtube.com/@hannenglish-w2k?si=nNxVXVmbjdAzgzK4"
+            target="_blank"
+            class="youtube-btn">
+
+            ▶ Truy cập Kênh YouTube
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <p>
+      © 2026 Hann English. All Rights Reserved.
+    </p>
+
+    <p>
+      Website học tiếng Anh toàn diện dành cho người Việt.
+    </p>
+
+  </footer>
 
 </body>
 </html>
