@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Test Trình Độ Tiếng Anh | Hann English</title>
+
+  <!-- GOOGLE FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    /* =========================
+       RESET CSS
+    ========================== */
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Poppins', sans-serif;
+      background:#f4f7fb;
+      color:#1e293b;
+      line-height:1.7;
+    }
+
+    a{
+      text-decoration:none;
+    }
+
+    .container{
+      width:90%;
+      max-width:1150px;
+      margin:auto;
+    }
+
+    /* =========================
+       HEADER
+    ========================== */
+
+    header{
+      background:#0f172a;
+      color:white;
+      padding:18px 0;
+      position:sticky;
+      top:0;
+      z-index:999;
+    }
+
+    .header-wrapper{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:14px;
+    }
+
+    .logo img{
+      width:55px;
+      height:55px;
+      border-radius:50%;
+      object-fit:cover;
+      border:3px solid white;
+    }
+
+    .logo h1{
+      font-size:1.2rem;
+    }
+
+    .home-btn{
+      background:#38bdf8;
+      color:white;
+      padding:12px 22px;
+      border-radius:50px;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    .home-btn:hover{
+      background:#0ea5e9;
+      transform:translateY(-3px);
+    }
+
+    /* =========================
+       HERO SECTION
+    ========================== */
+
+    .hero{
+      background:
+      linear-gradient(rgba(15,23,42,0.82), rgba(15,23,42,0.82)),
+      url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+
+      color:white;
+      text-align:center;
+      padding:95px 20px;
+    }
+
+    .hero h2{
+      font-size:3rem;
+      margin-bottom:18px;
+    }
+
+    .hero p{
+      max-width:760px;
+      margin:auto;
+      color:#dbeafe;
+      font-size:1.05rem;
+    }
+
+    /* =========================
+       MAIN SECTION
+    ========================== */
+
+    .main-section{
+      padding:80px 0;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:55px;
+    }
+
+    .section-title h3{
+      font-size:2.2rem;
+      color:#0f172a;
+      margin-bottom:14px;
+    }
+
+    .section-title p{
+      color:#64748b;
+      max-width:720px;
+      margin:auto;
+    }
+
+    /* =========================
+       LEVEL CARDS
+    ========================== */
+
+    .level-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:28px;
+    }
+
+    .level-card{
+      background:white;
+      border-radius:24px;
+      padding:35px 28px;
+      box-shadow:0 12px 30px rgba(0,0,0,0.07);
+      transition:0.3s ease;
+      border:1px solid #e2e8f0;
+      text-align:center;
+    }
+
+    .level-card:hover{
+      transform:translateY(-8px);
+    }
+
+    .level-badge{
+      display:inline-block;
+      padding:10px 18px;
+      border-radius:50px;
+      background:#38bdf8;
+      color:white;
+      font-weight:700;
+      margin-bottom:18px;
+    }
+
+    .level-card h4{
+      font-size:1.5rem;
+      margin-bottom:14px;
+      color:#0f172a;
+    }
+
+    .level-card p{
+      color:#475569;
+      margin-bottom:24px;
+      font-size:0.97rem;
+    }
+
+    .skill-list{
+      text-align:left;
+      margin-bottom:28px;
+      padding-left:20px;
+    }
+
+    .skill-list li{
+      margin-bottom:10px;
+      color:#475569;
+    }
+
+    .test-btn{
+      display:inline-block;
+      background:#0f172a;
+      color:white;
+      padding:14px 26px;
+      border-radius:50px;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    .test-btn:hover{
+      background:#38bdf8;
+      transform:translateY(-3px);
+    }
+
+    /* =========================
+       TEST INFO SECTION
+    ========================== */
+
+    .info-section{
+      margin-top:75px;
+    }
+
+    .info-box{
+      background:white;
+      border-radius:28px;
+      padding:45px;
+      box-shadow:0 12px 30px rgba(0,0,0,0.08);
+    }
+
+    .info-box h3{
+      font-size:2rem;
+      margin-bottom:25px;
+      color:#0f172a;
+    }
+
+    .info-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:22px;
+    }
+
+    .info-card{
+      background:#f8fafc;
+      border-left:5px solid #38bdf8;
+      padding:22px;
+      border-radius:18px;
+    }
+
+    .info-card h4{
+      margin-bottom:10px;
+      color:#0f172a;
+    }
+
+    .info-card p{
+      color:#475569;
+      font-size:0.96rem;
+    }
+
+    /* =========================
+       SAMPLE QUESTIONS
+    ========================== */
+
+    .sample-section{
+      margin-top:75px;
+    }
+
+    .sample-box{
+      background:#0f172a;
+      color:white;
+      padding:50px;
+      border-radius:30px;
+    }
+
+    .sample-box h3{
+      font-size:2rem;
+      margin-bottom:28px;
+      text-align:center;
+    }
+
+    .question-item{
+      background:rgba(255,255,255,0.08);
+      padding:22px;
+      border-radius:18px;
+      margin-bottom:18px;
+    }
+
+    .question-item strong{
+      color:#38bdf8;
+    }
+
+    /* =========================
+       CTA SECTION
+    ========================== */
+
+    .cta-section{
+      text-align:center;
+      margin-top:75px;
+      background:white;
+      padding:65px 25px;
+      border-radius:30px;
+      box-shadow:0 12px 30px rgba(0,0,0,0.07);
+    }
+
+    .cta-section h3{
+      font-size:2.2rem;
+      margin-bottom:18px;
+      color:#0f172a;
+    }
+
+    .cta-section p{
+      max-width:700px;
+      margin:auto;
+      margin-bottom:30px;
+      color:#64748b;
+    }
+
+    .cta-btn{
+      display:inline-block;
+      background:#38bdf8;
+      color:white;
+      padding:18px 36px;
+      border-radius:50px;
+      font-weight:600;
+      transition:0.3s;
+      box-shadow:0 10px 25px rgba(56,189,248,0.35);
+    }
+
+    .cta-btn:hover{
+      background:#0ea5e9;
+      transform:translateY(-4px);
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer{
+      background:#020617;
+      color:#cbd5e1;
+      text-align:center;
+      padding:35px 20px;
+      margin-top:80px;
+    }
+
+    footer p{
+      margin:6px 0;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================== */
+
+    @media(max-width:992px){
+
+      .level-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+    }
+
+    @media(max-width:768px){
+
+      .header-wrapper{
+        flex-direction:column;
+        gap:18px;
+      }
+
+      .hero h2{
+        font-size:2.2rem;
+      }
+
+      .level-grid{
+        grid-template-columns:1fr;
+      }
+
+      .info-grid{
+        grid-template-columns:1fr;
+      }
+
+      .info-box,
+      .sample-box{
+        padding:28px;
+      }
+
+      .section-title h3,
+      .info-box h3,
+      .sample-box h3,
+      .cta-section h3{
+        font-size:1.8rem;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+
+  <header>
+
+    <div class="container">
+
+      <div class="header-wrapper">
+
+        <div class="logo">
+
+          <img 
+            src="https://yt3.ggpht.com/s7MiNGwFfUfh3vK_AXi-6KmuxjkFszTGXIFc45ddRSfaEDeY6KB941THQzRxS0CXxPlnbpQ2Rw=s600-c-k-c0x00ffffff-no-rj-rp-mo"
+            alt="Hann English">
+
+          <h1>Hann English</h1>
+
+        </div>
+
+        <a href="index.html" class="home-btn">
+          ← Trang Chủ
+        </a>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <!-- =========================
+       HERO SECTION
+  ========================== -->
+
+  <section class="hero">
+
+    <div class="container">
+
+      <h2>English Level Test</h2>
+
+      <p>
+        Kiểm tra trình độ tiếng Anh của bạn với bài test chuẩn quốc tế
+        từ Cambridge English để xác định năng lực hiện tại.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       MAIN SECTION
+  ========================== -->
+
+  <section class="main-section">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h3>Đánh Giá Trình Độ Tiếng Anh</h3>
+
+        <p>
+          Bài test giúp bạn xác định kỹ năng tiếng Anh hiện tại
+          từ trình độ cơ bản đến nâng cao.
+        </p>
+
+      </div>
+
+      <!-- LEVEL GRID -->
+
+      <div class="level-grid">
+
+        <!-- BEGINNER -->
+
+        <div class="level-card">
+
+          <div class="level-badge">
+            A1 - A2
+          </div>
+
+          <h4>Beginner</h4>
+
+          <p>
+            Dành cho người mới bắt đầu học tiếng Anh.
+          </p>
+
+          <ul class="skill-list">
+
+            <li>Basic Vocabulary</li>
+
+            <li>Simple Grammar</li>
+
+            <li>Daily Conversation</li>
+
+            <li>Basic Reading</li>
+
+          </ul>
+
+          <a 
+            href="https://www.cambridgeenglish.org/vn/test-your-english/general-english/"
+            target="_blank"
+            class="test-btn">
+
+            Start Test
+
+          </a>
+
+        </div>
+
+        <!-- INTERMEDIATE -->
+
+        <div class="level-card">
+
+          <div class="level-badge">
+            B1 - B2
+          </div>
+
+          <h4>Intermediate</h4>
+
+          <p>
+            Phù hợp với người học giao tiếp và học thuật.
+          </p>
+
+          <ul class="skill-list">
+
+            <li>Communication Skills</li>
+
+            <li>Essay Writing</li>
+
+            <li>Listening Practice</li>
+
+            <li>Speaking Fluency</li>
+
+          </ul>
+
+          <a 
+            href="https://www.cambridgeenglish.org/vn/test-your-english/general-english/"
+            target="_blank"
+            class="test-btn">
+
+            Take Exam
+
+          </a>
+
+        </div>
+
+        <!-- ADVANCED -->
+
+        <div class="level-card">
+
+          <div class="level-badge">
+            C1 - C2
+          </div>
+
+          <h4>Advanced</h4>
+
+          <p>
+            Đánh giá khả năng tiếng Anh chuyên sâu và học thuật.
+          </p>
+
+          <ul class="skill-list">
+
+            <li>Academic English</li>
+
+            <li>Advanced Vocabulary</li>
+
+            <li>Critical Thinking</li>
+
+            <li>Professional Communication</li>
+
+          </ul>
+
+          <a 
+            href="https://www.cambridgeenglish.org/vn/test-your-english/general-english/"
+            target="_blank"
+            class="test-btn">
+
+            Check Level
+
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- INFO SECTION -->
+
+      <div class="info-section">
+
+        <div class="info-box">
+
+          <h3>📘 What Does The Test Include?</h3>
+
+          <div class="info-grid">
+
+            <div class="info-card">
+
+              <h4>Grammar</h4>
+
+              <p>
+                Kiểm tra ngữ pháp tiếng Anh từ cơ bản đến nâng cao.
+              </p>
+
+            </div>
+
+            <div class="info-card">
+
+              <h4>Vocabulary</h4>
+
+              <p>
+                Đánh giá vốn từ vựng học thuật và giao tiếp.
+              </p>
+
+            </div>
+
+            <div class="info-card">
+
+              <h4>Reading</h4>
+
+              <p>
+                Kiểm tra khả năng đọc hiểu tiếng Anh thực tế.
+              </p>
+
+            </div>
+
+            <div class="info-card">
+
+              <h4>Listening</h4>
+
+              <p>
+                Đánh giá khả năng nghe hiểu và phản xạ.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- SAMPLE QUESTIONS -->
+
+      <div class="sample-section">
+
+        <div class="sample-box">
+
+          <h3>📝 Sample Questions</h3>
+
+          <div class="question-item">
+
+            <strong>1.</strong>
+            Choose the correct sentence:
+            <br><br>
+            a) She go to school every day.
+            <br>
+            b) She goes to school every day.
+
+          </div>
+
+          <div class="question-item">
+
+            <strong>2.</strong>
+            What does "improve" mean?
+            <br><br>
+            a) Become better
+            <br>
+            b) Become worse
+
+          </div>
+
+          <div class="question-item">
+
+            <strong>3.</strong>
+            Complete the sentence:
+            <br><br>
+            "If I _____ more time, I would study English every day."
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- CTA -->
+
+      <div class="cta-section">
+
+        <h3>Discover Your English Level Today</h3>
+
+        <p>
+          Hãy kiểm tra trình độ tiếng Anh của bạn để xây dựng
+          lộ trình học phù hợp và hiệu quả hơn.
+        </p>
+
+        <a 
+          href="https://www.cambridgeenglish.org/vn/test-your-english/general-english/"
+          target="_blank"
+          class="cta-btn">
+
+          🌍 Take Cambridge English Test
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <p>
+      © 2026 Hann English • English Level Test
+    </p>
+
+    <p>
+      Learn English • Test Your Skills • Improve Every Day
+    </p>
+
+  </footer>
+
+</body>
+</html>

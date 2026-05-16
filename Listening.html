@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Listening Practice | Hann English</title>
+
+  <!-- GOOGLE FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    /* =========================
+       RESET CSS
+    ========================== */
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Poppins', sans-serif;
+      background:#f3f6fb;
+      color:#1e293b;
+      line-height:1.8;
+    }
+
+    a{
+      text-decoration:none;
+    }
+
+    .container{
+      width:90%;
+      max-width:1150px;
+      margin:auto;
+    }
+
+    /* =========================
+       HEADER
+    ========================== */
+
+    header{
+      background:#0f172a;
+      padding:18px 0;
+      color:white;
+      position:sticky;
+      top:0;
+      z-index:999;
+    }
+
+    .header-wrapper{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:14px;
+    }
+
+    .logo img{
+      width:55px;
+      height:55px;
+      border-radius:50%;
+      object-fit:cover;
+      border:3px solid white;
+    }
+
+    .logo h1{
+      font-size:1.2rem;
+    }
+
+    .home-btn{
+      background:#38bdf8;
+      color:white;
+      padding:12px 22px;
+      border-radius:50px;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    .home-btn:hover{
+      background:#0ea5e9;
+      transform:translateY(-3px);
+    }
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero{
+      background:
+      linear-gradient(rgba(15,23,42,0.82), rgba(15,23,42,0.82)),
+      url('https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+
+      color:white;
+      text-align:center;
+      padding:100px 20px;
+    }
+
+    .hero h2{
+      font-size:3rem;
+      margin-bottom:20px;
+    }
+
+    .hero p{
+      max-width:760px;
+      margin:auto;
+      color:#dbeafe;
+      font-size:1.05rem;
+    }
+
+    /* =========================
+       MAIN CONTENT
+    ========================== */
+
+    .main-section{
+      padding:80px 0;
+    }
+
+    .content-box{
+      background:white;
+      border-radius:28px;
+      padding:50px;
+      box-shadow:0 12px 30px rgba(0,0,0,0.07);
+    }
+
+    .content-box h3{
+      font-size:2.2rem;
+      margin-bottom:10px;
+      color:#0f172a;
+    }
+
+    .meta{
+      color:#64748b;
+      margin-bottom:30px;
+    }
+
+    .content-box p{
+      margin-bottom:22px;
+      color:#334155;
+    }
+
+    /* =========================
+       AUDIO LEVELS
+    ========================== */
+
+    .audio-section{
+      margin-top:45px;
+    }
+
+    .audio-section h3{
+      margin-bottom:25px;
+      color:#0f172a;
+      font-size:2rem;
+    }
+
+    .audio-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:24px;
+    }
+
+    .audio-card{
+      background:#f8fafc;
+      border:1px solid #e2e8f0;
+      border-radius:22px;
+      padding:25px;
+      transition:0.3s;
+    }
+
+    .audio-card:hover{
+      transform:translateY(-5px);
+    }
+
+    .audio-card h4{
+      margin-bottom:15px;
+      color:#0f172a;
+      font-size:1.2rem;
+    }
+
+    .audio-card p{
+      margin-bottom:15px;
+      color:#64748b;
+      font-size:0.95rem;
+    }
+
+    audio{
+      width:100%;
+    }
+
+    /* =========================
+       VOCABULARY
+    ========================== */
+
+    .vocab-section{
+      margin-top:70px;
+    }
+
+    .vocab-section h3{
+      margin-bottom:25px;
+      font-size:2rem;
+      color:#0f172a;
+    }
+
+    .vocab-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:20px;
+    }
+
+    .vocab-card{
+      background:#f8fafc;
+      border-left:5px solid #38bdf8;
+      padding:22px;
+      border-radius:18px;
+    }
+
+    .vocab-card h4{
+      margin-bottom:8px;
+      color:#0f172a;
+    }
+
+    .vocab-card p{
+      color:#475569;
+      margin:0;
+    }
+
+    /* =========================
+       QUESTIONS
+    ========================== */
+
+    .questions-section{
+      margin-top:70px;
+    }
+
+    .questions-section h3{
+      margin-bottom:25px;
+      font-size:2rem;
+      color:#0f172a;
+    }
+
+    .question-item{
+      background:#f8fafc;
+      border:1px solid #e2e8f0;
+      border-radius:16px;
+      padding:20px;
+      margin-bottom:16px;
+      color:#334155;
+    }
+
+    /* =========================
+       CTA
+    ========================== */
+
+    .cta-section{
+      margin-top:70px;
+      background:#0f172a;
+      color:white;
+      padding:60px 25px;
+      border-radius:30px;
+      text-align:center;
+    }
+
+    .cta-section h3{
+      font-size:2.2rem;
+      margin-bottom:18px;
+    }
+
+    .cta-section p{
+      max-width:700px;
+      margin:auto;
+      margin-bottom:30px;
+      color:#cbd5e1;
+    }
+
+    .cta-btn{
+      display:inline-block;
+      background:#38bdf8;
+      color:white;
+      padding:16px 34px;
+      border-radius:50px;
+      font-weight:600;
+      transition:0.3s;
+      box-shadow:0 10px 25px rgba(56,189,248,0.3);
+    }
+
+    .cta-btn:hover{
+      background:#0ea5e9;
+      transform:translateY(-4px);
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer{
+      background:#020617;
+      color:#cbd5e1;
+      text-align:center;
+      padding:35px 20px;
+      margin-top:80px;
+    }
+
+    footer p{
+      margin:5px 0;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================== */
+
+    @media(max-width:768px){
+
+      .header-wrapper{
+        flex-direction:column;
+        gap:18px;
+      }
+
+      .hero h2{
+        font-size:2.2rem;
+      }
+
+      .content-box{
+        padding:28px;
+      }
+
+      .audio-grid,
+      .vocab-grid{
+        grid-template-columns:1fr;
+      }
+
+      .audio-section h3,
+      .vocab-section h3,
+      .questions-section h3,
+      .cta-section h3{
+        font-size:1.7rem;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+
+  <header>
+
+    <div class="container">
+
+      <div class="header-wrapper">
+
+        <div class="logo">
+
+          <img 
+            src="https://yt3.ggpht.com/s7MiNGwFfUfh3vK_AXi-6KmuxjkFszTGXIFc45ddRSfaEDeY6KB941THQzRxS0CXxPlnbpQ2Rw=s600-c-k-c0x00ffffff-no-rj-rp-mo"
+            alt="Hann English Logo">
+
+          <h1>Hann English</h1>
+
+        </div>
+
+        <a href="index.html" class="home-btn">
+          ← Trang Chủ
+        </a>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <!-- =========================
+       HERO
+  ========================== -->
+
+  <section class="hero">
+
+    <div class="container">
+
+      <h2>Listening Practice</h2>
+
+      <p>
+        Luyện kỹ năng nghe tiếng Anh với nhiều tốc độ khác nhau,
+        từ cực chậm đến tốc độ tự nhiên của người bản xứ.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       MAIN CONTENT
+  ========================== -->
+
+  <section class="main-section">
+
+    <div class="container">
+
+      <div class="content-box">
+
+        <h3>
+          Africa may split into two continents
+        </h3>
+
+        <div class="meta">
+          Source: Breaking News English
+        </div>
+
+        <p>
+          Scientists say Africa could split into two continents in the future.
+          A giant crack appeared in Ethiopia in 2005. It stretched for 56 km.
+          Scientists believe tectonic plates are slowly moving apart.
+        </p>
+
+        <p>
+          Experts say a new ocean may form between the two land masses.
+          This process could take millions of years, but researchers are
+          carefully studying the changes happening under the Earth's surface.
+        </p>
+
+        <!-- =========================
+             AUDIO LEVELS
+        ========================== -->
+
+        <div class="audio-section">
+
+          <h3>🎧 Listening Audio Levels</h3>
+
+          <div class="audio-grid">
+
+            <!-- SLOWEST -->
+
+            <div class="audio-card">
+
+              <h4>🐢 Slowest</h4>
+
+              <p>
+                Dành cho người mới bắt đầu luyện nghe.
+              </p>
+
+              <audio controls>
+                <source 
+                  src="https://breakingnewsenglish.com/2605/260514-african-continent-ss.mp3"
+                  type="audio/mpeg">
+              </audio>
+
+            </div>
+
+            <!-- SLOWER -->
+
+            <div class="audio-card">
+
+              <h4>🚶 Slower</h4>
+
+              <p>
+                Tốc độ chậm giúp nghe rõ phát âm.
+              </p>
+
+              <audio controls>
+                <source 
+                  src="https://breakingnewsenglish.com/2605/260514-african-continent-s.mp3"
+                  type="audio/mpeg">
+              </audio>
+
+            </div>
+
+            <!-- MEDIUM BRITISH -->
+
+            <div class="audio-card">
+
+              <h4>🇬🇧 Medium (British English)</h4>
+
+              <p>
+                Giọng Anh-Anh tốc độ trung bình.
+              </p>
+
+              <audio controls>
+                <source 
+                  src="https://breakingnewsenglish.com/2605/260514-african-continent.mp3"
+                  type="audio/mpeg">
+              </audio>
+
+            </div>
+
+            <!-- MEDIUM AMERICAN -->
+
+            <div class="audio-card">
+
+              <h4>🇺🇸 Medium (N. American English)</h4>
+
+              <p>
+                Giọng Anh-Mỹ tốc độ tự nhiên.
+              </p>
+
+              <audio controls>
+                <source 
+                  src="https://breakingnewsenglish.com/2605/260514-african-continent-a.mp3"
+                  type="audio/mpeg">
+              </audio>
+
+            </div>
+
+            <!-- FASTER -->
+
+            <div class="audio-card">
+
+              <h4>⚡ Faster</h4>
+
+              <p>
+                Tăng phản xạ nghe tiếng Anh thực tế.
+              </p>
+
+              <audio controls>
+                <source 
+                  src="https://breakingnewsenglish.com/2605/260514-african-continent-f.mp3"
+                  type="audio/mpeg">
+              </audio>
+
+            </div>
+
+            <!-- FASTEST -->
+
+            <div class="audio-card">
+
+              <h4>🔥 Fastest</h4>
+
+              <p>
+                Thử thách kỹ năng nghe nâng cao.
+              </p>
+
+              <audio controls>
+                <source 
+                  src="https://breakingnewsenglish.com/2605/260514-african-continent-ff.mp3"
+                  type="audio/mpeg">
+              </audio>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- =========================
+             VOCABULARY
+        ========================== -->
+
+        <div class="vocab-section">
+
+          <h3>📘 Key Vocabulary</h3>
+
+          <div class="vocab-grid">
+
+            <div class="vocab-card">
+
+              <h4>Continent</h4>
+
+              <p>
+                Châu lục
+              </p>
+
+            </div>
+
+            <div class="vocab-card">
+
+              <h4>Tectonic Plates</h4>
+
+              <p>
+                Các mảng kiến tạo
+              </p>
+
+            </div>
+
+            <div class="vocab-card">
+
+              <h4>Researchers</h4>
+
+              <p>
+                Các nhà nghiên cứu
+              </p>
+
+            </div>
+
+            <div class="vocab-card">
+
+              <h4>Surface</h4>
+
+              <p>
+                Bề mặt
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- =========================
+             QUESTIONS
+        ========================== -->
+
+        <div class="questions-section">
+
+          <h3>📝 Listening Questions</h3>
+
+          <div class="question-item">
+            1. Where did the giant crack appear?
+          </div>
+
+          <div class="question-item">
+            2. How long was the crack?
+          </div>
+
+          <div class="question-item">
+            3. What are tectonic plates doing?
+          </div>
+
+          <div class="question-item">
+            4. What may form between the land masses?
+          </div>
+
+          <div class="question-item">
+            5. How long could the process take?
+          </div>
+
+        </div>
+
+        <!-- =========================
+             CTA
+        ========================== -->
+
+        <div class="cta-section">
+
+          <h3>Practice Listening Every Day</h3>
+
+          <p>
+            Luyện nghe với nhiều tốc độ khác nhau sẽ giúp bạn cải thiện
+            khả năng nghe hiểu và phản xạ tiếng Anh tự nhiên hơn.
+          </p>
+
+          <a 
+            href="https://breakingnewsenglish.com/2605/260514-african-continent-l.html"
+            target="_blank"
+            class="cta-btn">
+
+            🌍 Open Original Listening Lesson
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <p>
+      © 2026 Hann English • Listening Practice
+    </p>
+
+    <p>
+      Learn English • Listen Better • Speak Confidently
+    </p>
+
+  </footer>
+
+</body>
+</html>

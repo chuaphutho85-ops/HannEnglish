@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Speaking Practice | Hann English</title>
+
+  <!-- GOOGLE FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    /* =========================
+       RESET
+    ========================== */
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Poppins', sans-serif;
+      background:#f5f7fb;
+      color:#1e293b;
+      line-height:1.7;
+    }
+
+    a{
+      text-decoration:none;
+    }
+
+    .container{
+      width:90%;
+      max-width:1150px;
+      margin:auto;
+    }
+
+    /* =========================
+       HEADER
+    ========================== */
+
+    header{
+      background:#0f172a;
+      color:white;
+      padding:18px 0;
+      position:sticky;
+      top:0;
+      z-index:999;
+    }
+
+    .header-wrapper{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:14px;
+    }
+
+    .logo img{
+      width:55px;
+      height:55px;
+      border-radius:50%;
+      object-fit:cover;
+      border:3px solid white;
+    }
+
+    .logo h1{
+      font-size:1.2rem;
+    }
+
+    .home-btn{
+      background:#38bdf8;
+      color:white;
+      padding:12px 22px;
+      border-radius:50px;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    .home-btn:hover{
+      background:#0ea5e9;
+      transform:translateY(-3px);
+    }
+
+    /* =========================
+       HERO SECTION
+    ========================== */
+
+    .hero{
+      background:
+      linear-gradient(rgba(15,23,42,0.82), rgba(15,23,42,0.82)),
+      url('https://images.unsplash.com/photo-1522202222206-b7501f97dbb8?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+
+      color:white;
+      text-align:center;
+      padding:90px 20px;
+    }
+
+    .hero h2{
+      font-size:3rem;
+      margin-bottom:18px;
+    }
+
+    .hero p{
+      max-width:750px;
+      margin:auto;
+      color:#dbeafe;
+      font-size:1.05rem;
+    }
+
+    /* =========================
+       MAIN SECTION
+    ========================== */
+
+    .main-section{
+      padding:80px 0;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:50px;
+    }
+
+    .section-title h3{
+      font-size:2.2rem;
+      color:#0f172a;
+      margin-bottom:12px;
+    }
+
+    .section-title p{
+      color:#64748b;
+      max-width:700px;
+      margin:auto;
+    }
+
+    /* =========================
+       SPEAKING GRID
+    ========================== */
+
+    .speaking-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:28px;
+    }
+
+    .speaking-card{
+      background:white;
+      padding:30px;
+      border-radius:24px;
+      box-shadow:0 12px 30px rgba(0,0,0,0.07);
+      transition:0.3s ease;
+      border:1px solid #e2e8f0;
+    }
+
+    .speaking-card:hover{
+      transform:translateY(-8px);
+    }
+
+    .emoji{
+      font-size:3rem;
+      margin-bottom:18px;
+    }
+
+    .speaking-card h4{
+      font-size:1.4rem;
+      margin-bottom:14px;
+      color:#0f172a;
+    }
+
+    .speaking-card ul{
+      padding-left:18px;
+      margin-bottom:22px;
+    }
+
+    .speaking-card li{
+      margin-bottom:10px;
+      color:#475569;
+    }
+
+    .practice-btn{
+      display:inline-block;
+      background:#0f172a;
+      color:white;
+      padding:13px 24px;
+      border-radius:50px;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    .practice-btn:hover{
+      background:#38bdf8;
+      transform:translateY(-3px);
+    }
+
+    /* =========================
+       DAILY QUESTIONS
+    ========================== */
+
+    .daily-section{
+      margin-top:70px;
+    }
+
+    .question-box{
+      background:white;
+      border-radius:24px;
+      padding:40px;
+      box-shadow:0 12px 30px rgba(0,0,0,0.08);
+    }
+
+    .question-box h3{
+      margin-bottom:22px;
+      color:#0f172a;
+      font-size:2rem;
+    }
+
+    .question-item{
+      background:#f8fafc;
+      border-left:5px solid #38bdf8;
+      padding:18px 20px;
+      border-radius:14px;
+      margin-bottom:16px;
+      color:#334155;
+    }
+
+    /* =========================
+       CTA
+    ========================== */
+
+    .cta-section{
+      margin-top:70px;
+      text-align:center;
+      background:#0f172a;
+      color:white;
+      padding:60px 25px;
+      border-radius:30px;
+    }
+
+    .cta-section h3{
+      font-size:2.2rem;
+      margin-bottom:18px;
+    }
+
+    .cta-section p{
+      max-width:700px;
+      margin:auto;
+      margin-bottom:28px;
+      color:#cbd5e1;
+    }
+
+    .cta-btn{
+      display:inline-block;
+      background:#38bdf8;
+      color:white;
+      padding:16px 32px;
+      border-radius:50px;
+      font-weight:600;
+      transition:0.3s;
+      box-shadow:0 10px 25px rgba(56,189,248,0.3);
+    }
+
+    .cta-btn:hover{
+      background:#0ea5e9;
+      transform:translateY(-4px);
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer{
+      background:#020617;
+      color:#cbd5e1;
+      text-align:center;
+      padding:35px 20px;
+      margin-top:80px;
+    }
+
+    footer p{
+      margin:6px 0;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================== */
+
+    @media(max-width:768px){
+
+      .header-wrapper{
+        flex-direction:column;
+        gap:18px;
+      }
+
+      .hero h2{
+        font-size:2.2rem;
+      }
+
+      .speaking-grid{
+        grid-template-columns:1fr;
+      }
+
+      .question-box{
+        padding:28px;
+      }
+
+      .section-title h3,
+      .question-box h3,
+      .cta-section h3{
+        font-size:1.8rem;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+
+  <header>
+
+    <div class="container">
+
+      <div class="header-wrapper">
+
+        <div class="logo">
+
+          <img 
+            src="https://yt3.ggpht.com/s7MiNGwFfUfh3vK_AXi-6KmuxjkFszTGXIFc45ddRSfaEDeY6KB941THQzRxS0CXxPlnbpQ2Rw=s600-c-k-c0x00ffffff-no-rj-rp-mo"
+            alt="Hann English">
+
+          <h1>Hann English</h1>
+
+        </div>
+
+        <a href="index.html" class="home-btn">
+          ← Trang Chủ
+        </a>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <!-- =========================
+       HERO
+  ========================== -->
+
+  <section class="hero">
+
+    <div class="container">
+
+      <h2>Speaking Practice</h2>
+
+      <p>
+        Luyện phản xạ giao tiếp tiếng Anh mỗi ngày với các chủ đề thực tế,
+        giúp bạn nói tự nhiên và tự tin hơn trong cuộc sống và công việc.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       MAIN SECTION
+  ========================== -->
+
+  <section class="main-section">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h3>Chủ Đề Speaking Phổ Biến</h3>
+
+        <p>
+          Thực hành trả lời các câu hỏi tiếng Anh thông dụng để cải thiện
+          phát âm, từ vựng và khả năng phản xạ giao tiếp.
+        </p>
+
+      </div>
+
+      <!-- GRID -->
+
+      <div class="speaking-grid">
+
+        <!-- DAILY LIFE -->
+
+        <div class="speaking-card">
+
+          <div class="emoji">☕</div>
+
+          <h4>Daily Life</h4>
+
+          <ul>
+
+            <li>What time do you usually wake up?</li>
+
+            <li>What do you do on weekends?</li>
+
+            <li>Do you like coffee or tea?</li>
+
+            <li>What is your daily routine?</li>
+
+          </ul>
+
+          <a 
+            href="http://iteslj.org/questions/"
+            target="_blank"
+            class="practice-btn">
+
+            Practice Speaking
+
+          </a>
+
+        </div>
+
+        <!-- HOBBIES -->
+
+        <div class="speaking-card">
+
+          <div class="emoji">🎨</div>
+
+          <h4>Hobbies & Interests</h4>
+
+          <ul>
+
+            <li>What is your favorite hobby?</li>
+
+            <li>Do you enjoy reading books?</li>
+
+            <li>What music do you listen to?</li>
+
+            <li>How do you relax after work?</li>
+
+          </ul>
+
+          <a 
+            href="http://iteslj.org/questions/"
+            target="_blank"
+            class="practice-btn">
+
+            Explore Topics
+
+          </a>
+
+        </div>
+
+        <!-- TRAVEL -->
+
+        <div class="speaking-card">
+
+          <div class="emoji">✈️</div>
+
+          <h4>Travel & Culture</h4>
+
+          <ul>
+
+            <li>Which country do you want to visit?</li>
+
+            <li>Do you enjoy traveling?</li>
+
+            <li>What food do you recommend?</li>
+
+            <li>Tell me about your hometown.</li>
+
+          </ul>
+
+          <a 
+            href="http://iteslj.org/questions/"
+            target="_blank"
+            class="practice-btn">
+
+            Start Speaking
+
+          </a>
+
+        </div>
+
+        <!-- EDUCATION -->
+
+        <div class="speaking-card">
+
+          <div class="emoji">📚</div>
+
+          <h4>Education & Work</h4>
+
+          <ul>
+
+            <li>Why are you learning English?</li>
+
+            <li>What is your dream job?</li>
+
+            <li>Do you study every day?</li>
+
+            <li>How can English help your career?</li>
+
+          </ul>
+
+          <a 
+            href="http://iteslj.org/questions/"
+            target="_blank"
+            class="practice-btn">
+
+            Improve Fluency
+
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- DAILY QUESTIONS -->
+
+      <div class="daily-section">
+
+        <div class="question-box">
+
+          <h3>🎤 Speaking Challenge Today</h3>
+
+          <div class="question-item">
+            Describe your perfect day in English.
+          </div>
+
+          <div class="question-item">
+            What are the advantages of learning English?
+          </div>
+
+          <div class="question-item">
+            If you could travel anywhere, where would you go?
+          </div>
+
+          <div class="question-item">
+            What is your biggest dream for the future?
+          </div>
+
+          <div class="question-item">
+            Talk about a person who inspires you.
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- CTA -->
+
+      <div class="cta-section">
+
+        <h3>Practice Makes Perfect</h3>
+
+        <p>
+          Hãy luyện nói tiếng Anh ít nhất 15 phút mỗi ngày để cải thiện
+          sự tự tin, khả năng phát âm và phản xạ giao tiếp tự nhiên.
+        </p>
+
+        <a 
+          href="http://iteslj.org/questions/"
+          target="_blank"
+          class="cta-btn">
+
+          🌍 Open Full Speaking Topics
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <p>
+      © 2026 Hann English • Speaking Practice
+    </p>
+
+    <p>
+      Learn English • Speak Confidently • Communicate Globally
+    </p>
+
+  </footer>
+
+</body>
+</html>
