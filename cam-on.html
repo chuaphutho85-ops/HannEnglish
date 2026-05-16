@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Cảm Ơn | Hann English</title>
+
+  <!-- GOOGLE FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    /* =========================
+       RESET CSS
+    ========================== */
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Poppins', sans-serif;
+      min-height:100vh;
+
+      display:flex;
+      justify-content:center;
+      align-items:center;
+
+      background:
+      linear-gradient(rgba(15,23,42,0.88), rgba(15,23,42,0.88)),
+      url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600&auto=format&fit=crop')
+      center/cover no-repeat;
+
+      padding:20px;
+    }
+
+    /* =========================
+       THANK YOU BOX
+    ========================== */
+
+    .thankyou-box{
+      width:100%;
+      max-width:700px;
+
+      background:white;
+      border-radius:35px;
+
+      padding:60px 40px;
+
+      text-align:center;
+
+      box-shadow:0 20px 50px rgba(0,0,0,0.15);
+
+      animation:fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn{
+      from{
+        opacity:0;
+        transform:translateY(30px);
+      }
+
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    /* =========================
+       ICON
+    ========================== */
+
+    .icon{
+      font-size:5rem;
+      margin-bottom:25px;
+    }
+
+    /* =========================
+       TEXT
+    ========================== */
+
+    h1{
+      font-size:3rem;
+      color:#0f172a;
+      margin-bottom:20px;
+    }
+
+    p{
+      font-size:1.08rem;
+      color:#64748b;
+      line-height:1.8;
+      margin-bottom:18px;
+    }
+
+    .highlight{
+      color:#38bdf8;
+      font-weight:600;
+    }
+
+    /* =========================
+       BUTTONS
+    ========================== */
+
+    .button-group{
+      margin-top:35px;
+
+      display:flex;
+      justify-content:center;
+      gap:18px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      display:inline-block;
+
+      padding:16px 30px;
+
+      border-radius:50px;
+
+      font-weight:600;
+
+      transition:0.3s;
+    }
+
+    .home-btn{
+      background:#38bdf8;
+      color:white;
+
+      box-shadow:0 10px 25px rgba(56,189,248,0.35);
+    }
+
+    .home-btn:hover{
+      background:#0ea5e9;
+      transform:translateY(-4px);
+    }
+
+    .youtube-btn{
+      background:#ff0000;
+      color:white;
+    }
+
+    .youtube-btn:hover{
+      background:#d60000;
+      transform:translateY(-4px);
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================== */
+
+    @media(max-width:768px){
+
+      .thankyou-box{
+        padding:45px 25px;
+      }
+
+      h1{
+        font-size:2.2rem;
+      }
+
+      p{
+        font-size:1rem;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- =========================
+       THANK YOU BOX
+  ========================== -->
+
+  <div class="thankyou-box">
+
+    <!-- ICON -->
+
+    <div class="icon">
+      🎉
+    </div>
+
+    <!-- TITLE -->
+
+    <h1>Cảm Ơn Bạn!</h1>
+
+    <!-- CONTENT -->
+
+    <p>
+      Hann English đã nhận được thông tin đăng ký tư vấn của bạn.
+    </p>
+
+    <p>
+      Chúng tôi sẽ liên hệ trong thời gian sớm nhất để hỗ trợ
+      và xây dựng lộ trình học phù hợp dành riêng cho bạn.
+    </p>
+
+    <p class="highlight">
+      Chúc bạn học tiếng Anh thật hiệu quả và tự tin hơn mỗi ngày ✨
+    </p>
+
+    <!-- BUTTONS -->
+
+    <div class="button-group">
+
+      <!-- BACK HOME -->
+
+      <a href="index.html" class="btn home-btn">
+        ← Quay Về Trang Chủ
+      </a>
+
+      <!-- YOUTUBE -->
+
+      <a 
+        href="https://youtube.com/@hannenglish-w2k?si=nNxVXVmbjdAzgzK4"
+        target="_blank"
+        class="btn youtube-btn">
+
+        ▶ Xem YouTube
+
+      </a>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
