@@ -178,6 +178,74 @@
       color:#0f172a;
     }
 
+<body>
+
+  <!-- VIDEO BACKGROUND -->
+  <video id="bgVideo" autoplay muted playsinline>
+    <source 
+      src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260328_083109_283f3553-e28f-428b-a723-d639c617eb2b.mp4" 
+      type="video/mp4">
+  </video>
+
+  <!-- OVERLAY -->
+  <div class="overlay"></div>
+
+  <!-- HEADER -->
+  <header>
+    ...
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    ...
+  </section>
+
+  <!-- SCRIPT -->
+  <script>
+
+    const video = document.getElementById("bgVideo");
+
+    function animateVideo() {
+
+      const duration = video.duration;
+      const current = video.currentTime;
+
+      // Fade In
+      if(current <= 0.5){
+        video.style.opacity = current / 0.5;
+      }
+
+      // Fade Out
+      else if(current >= duration - 0.5){
+        video.style.opacity = (duration - current) / 0.5;
+      }
+
+      else{
+        video.style.opacity = 1;
+      }
+
+      requestAnimationFrame(animateVideo);
+    }
+
+    video.addEventListener("loadedmetadata", () => {
+      animateVideo();
+    });
+
+    video.addEventListener("ended", () => {
+
+      video.style.opacity = 0;
+
+      setTimeout(() => {
+        video.currentTime = 0;
+        video.play();
+      },100);
+
+    });
+
+  </script>
+
+</body>
+    
     /* =========================
        VIDEO SECTION
     ========================== */
