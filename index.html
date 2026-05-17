@@ -667,94 +667,131 @@
 
 </div>
 
-  <!-- =========================
-     DAILY LEARNING TOOLS
+ <!-- =========================
+     ENGLISH LEARNING CORNER (EMBEDDED UI)
 ========================== -->
 
-<div class="tools-grid">
+<section class="english-tools" id="english-tools">
 
-  <!-- DAILY VOCABULARY -->
+  <div class="container">
 
-  <div class="tool-card">
+    <div class="section-title">
 
-    <h3>📘 Daily Vocabulary</h3>
+      <h2>📚 English Learning Corner</h2>
 
-    <iframe
-      src="https://www.merriam-webster.com/word-of-the-day"
-      class="tool-frame">
-    </iframe>
+      <p>
+        Học tiếng Anh mỗi ngày với Vocabulary, Idioms, Grammar, Quiz và Pronunciation.
+      </p>
+
+    </div>
+
+    <div class="tools-grid">
+
+      <!-- DAILY VOCABULARY -->
+
+      <div class="tool-card">
+
+        <h3>📘 Daily Vocabulary</h3>
+
+        <div class="tool-content">
+          <p class="tool-title">Word of the Day</p>
+          <p><strong>Example:</strong> “Resilient”</p>
+          <p>Meaning: able to recover quickly from difficulties.</p>
+          <p>Example: She is a resilient student who never gives up.</p>
+        </div>
+
+        <button class="tool-btn">Learn More</button>
+
+      </div>
+
+      <!-- IDIOM OF THE DAY -->
+
+      <div class="tool-card">
+
+        <h3>💬 Idiom of the Day</h3>
+
+        <div class="tool-content">
+          <p class="tool-title">Idiom: “Break the ice”</p>
+          <p>Meaning: to start a conversation in a social situation.</p>
+          <p>Example: He told a joke to break the ice.</p>
+        </div>
+
+        <button class="tool-btn">Explore Idioms</button>
+
+      </div>
+
+      <!-- GRAMMAR TIP -->
+
+      <div class="tool-card">
+
+        <h3>✍ Grammar Tip</h3>
+
+        <div class="tool-content">
+          <p class="tool-title">Present Perfect</p>
+          <p>Used for actions that happened in the past but still relevant.</p>
+          <p>Example: I have studied English for 3 years.</p>
+        </div>
+
+        <button class="tool-btn">Study Grammar</button>
+
+      </div>
+
+      <!-- DAILY QUIZ -->
+
+      <div class="tool-card">
+
+        <h3>🧠 Daily Quiz</h3>
+
+        <div class="tool-content">
+          <p class="tool-title">Quick Test</p>
+          <p>Choose the correct answer:</p>
+          <p><strong>She ____ to school every day.</strong></p>
+          <p>A. go B. goes C. going</p>
+        </div>
+
+        <button class="tool-btn">Start Quiz</button>
+
+      </div>
+
+      <!-- PRONUNCIATION -->
+
+      <div class="tool-card">
+
+        <h3>🎧 Pronunciation Practice</h3>
+
+        <div class="tool-content">
+          <p class="tool-title">Word: “Opportunity”</p>
+          <p>/ˌɒp.əˈtʃuː.nə.ti/</p>
+          <p>Practice slowly → opportunity</p>
+        </div>
+
+        <button class="tool-btn">Practice Now</button>
+
+      </div>
+
+      <!-- PHRASAL VERB -->
+
+      <div class="tool-card">
+
+        <h3>🔥 Phrasal Verb Today</h3>
+
+        <div class="tool-content">
+          <p class="tool-title">“Give up”</p>
+          <p>Meaning: stop trying</p>
+          <p>Example: Never give up on your dreams.</p>
+        </div>
+
+        <button class="tool-btn">Learn More</button>
+
+      </div>
+
+    </div>
 
   </div>
 
-  <!-- IDIOM OF THE DAY -->
+</section>
 
-  <div class="tool-card">
-
-    <h3>💬 Idiom of the Day</h3>
-
-    <iframe
-      src="https://www.theidioms.com/"
-      class="tool-frame">
-    </iframe>
-
-  </div>
-
-  <!-- GRAMMAR TIP -->
-
-  <div class="tool-card">
-
-    <h3>✍ Grammar Tip</h3>
-
-    <iframe
-      src="https://www.perfect-english-grammar.com/"
-      class="tool-frame">
-    </iframe>
-
-  </div>
-
-  <!-- DAILY QUIZ -->
-
-  <div class="tool-card">
-
-    <h3>🧠 Daily Quiz</h3>
-
-    <iframe
-      src="https://www.cambridgeenglish.org/test-your-english/"
-      class="tool-frame">
-    </iframe>
-
-  </div>
-
-  <!-- PRONUNCIATION -->
-
-  <div class="tool-card">
-
-    <h3>🎧 Pronunciation Practice</h3>
-
-    <iframe
-      src="https://youglish.com/"
-      class="tool-frame">
-    </iframe>
-
-  </div>
-
-  <!-- PHRASAL VERB -->
-
-  <div class="tool-card">
-
-    <h3>🔥 Phrasal Verb Today</h3>
-
-    <iframe
-      src="https://www.usingenglish.com/reference/phrasal-verbs/"
-      class="tool-frame">
-    </iframe>
-
-  </div>
-
-</div>    
-      
 <style>
-
 /* =========================
    ENGLISH LEARNING CORNER
 ========================== */
@@ -768,7 +805,7 @@
   overflow:hidden;
 }
   
-.english-tools{
+  .english-tools{
   padding:100px 20px;
   background:#f8fafc;
 }
@@ -782,11 +819,10 @@
 
 .tool-card{
   background:white;
-  padding:35px 28px;
   border-radius:25px;
+  padding:30px;
   box-shadow:0 10px 30px rgba(0,0,0,0.08);
-  transition:0.3s ease;
-  text-align:center;
+  transition:0.3s;
   border:1px solid #e2e8f0;
 }
 
@@ -796,25 +832,33 @@
 }
 
 .tool-card h3{
-  font-size:1.3rem;
-  margin-bottom:18px;
+  margin-bottom:15px;
   color:#0f172a;
 }
 
-.tool-card p{
-  color:#64748b;
-  font-size:0.96rem;
-  line-height:1.7;
-  margin-bottom:28px;
+.tool-content{
+  background:#f1f5f9;
+  padding:18px;
+  border-radius:15px;
+  margin-bottom:20px;
+  text-align:left;
+}
+
+.tool-title{
+  font-weight:700;
+  color:#0f172a;
+  margin-bottom:8px;
 }
 
 .tool-btn{
   display:inline-block;
   background:#38bdf8;
   color:white;
-  padding:14px 24px;
+  border:none;
+  padding:12px 22px;
   border-radius:50px;
   font-weight:600;
+  cursor:pointer;
   transition:0.3s;
 }
 
@@ -826,22 +870,17 @@
 /* RESPONSIVE */
 
 @media(max-width:992px){
-
   .tools-grid{
     grid-template-columns:repeat(2,1fr);
   }
-
 }
 
 @media(max-width:768px){
-
   .tools-grid{
     grid-template-columns:1fr;
   }
-
 }
-
-</style>
+  </style>
   
   <!-- =========================
        TEST SECTION
